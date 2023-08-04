@@ -130,23 +130,19 @@ section {
 
 .home-body .name-animate {
     position: relative;
-    width: 32.8rem;
+    width: 30rem;
 }
 
 .home-body .name-animate h3 {
-    /* font-size: 3rem; */
     font-size: 22px;
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--secondary-clr);
     background-image: linear-gradient(var(--secondary-clr), var(--secondary-clr));
     background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    /* Safari, Chrome, and newer versions of Opera */
-    -moz-background-clip: text;
-    /* Older versions of Firefox */
-    -o-background-clip: text;
-    /* Older versions of Opera */
+    -webkit-background-clip: text; /* Safari, Chrome, and newer versions of Opera */
+    -moz-background-clip: text; /* Older versions of Firefox */
+    -o-background-clip: text; /* Older versions of Opera */
     background-position: -33rem 0;
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
