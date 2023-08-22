@@ -103,8 +103,17 @@ section {
     background: url('./assets/images/Portfolio\ background\ -\ 1.png') no-repeat;
     background-position: center;
     padding: 0 10%;
+    position: relative;
 }
-
+.circle1{
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: #ffffff24;
+}
 .home-body {
     max-width: 600px;
     z-index: 99;
@@ -229,7 +238,7 @@ section {
     left: 0;
     width: 0;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 6px;
     background: var(--main-color);
     z-index: -1;
     transition: .5s;
@@ -246,7 +255,7 @@ section {
 .home-social {
     position: absolute;
     bottom: 40px;
-    width: 170px;
+    width: 210px;
     display: flex;
     justify-content: space-between;
 }
@@ -269,12 +278,12 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: transparent;
     border: 2px solid var(--secondary-clr);
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 23px;
     color: var(--secondary-clr);
     text-decoration: none;
     z-index: 1;
