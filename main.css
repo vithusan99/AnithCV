@@ -511,6 +511,8 @@ section {
     min-height: auto;
     padding-bottom: 3rem;
     padding-top: 5rem;
+    position: relative;
+    z-index: 2;
 }
 
 .education .edu-row {
@@ -833,7 +835,7 @@ section {
     color: var(--secondary-clr);
 }
 
-/* animation reload and scroll  */
+/* ---------------------------------------animation reload and scroll  */
 .animate {
     position: absolute;
     top: 0;
@@ -851,6 +853,87 @@ section {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
 }
+
+/* -------------------------------------------solar design  */
+
+.solar-design{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 50vh; */
+}
+
+.sun{   
+    width: 100px;
+    height: 100px;
+    background-color: #fdd835;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #fdd835;
+    z-index: 1;
+
+}
+
+.earth{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #00abf0;
+    transform-origin: top left;
+    border-radius: 50%;
+    animation: rotate-earth 12s linear infinite;
+    z-index: 1;
+
+}
+.earth::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px dashed rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: translate(-50%,-50%);
+}
+.moon{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    animation: rotate-moon 6s linear infinite;
+    z-index: 1;
+
+}
+
+
+@keyframes rotate-moon {
+    0%{
+        transform: rotate(0deg) translateX(35px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(35px);
+    }
+}
+@keyframes rotate-earth {
+    0%{
+        transform: rotate(0deg) translateX(90px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(90px);
+    }
+}
+
 
 @keyframes logoRight {
     100% {
@@ -1089,6 +1172,44 @@ section {
     .home-social a {
         font-size: 17px;
     }
+    .solar-design{
+        bottom: -5%;
+        right: 1%;
+    }
+    .earth{
+        width: 25px;
+        height: 25px;
+    }
+    .sun{
+        width: 60px;
+        height: 60px;
+    }
+
+    .moon{
+        width: 15px;
+        height: 15px;
+    }
+    .earth::before{
+        width: 60px;
+        height: 60px;
+    }
+    @keyframes rotate-moon {
+        0%{
+            transform: rotate(0deg) translateX(20px);
+        }
+        100% {
+            transform: rotate(360deg) translateX(20px);
+        }
+    }
+    @keyframes rotate-earth {
+        0%{
+            transform: rotate(0deg) translateX(90px);
+        }
+        100% {
+            transform: rotate(360deg) translateX(90px);
+        }
+    }
+    
 }
 
 @media (max-width:462px) {
