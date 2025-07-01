@@ -593,6 +593,29 @@ section {
     font-size: .85rem;
     padding-top: .5rem;
 }
+/* -----------------------------------          new skill  */
+ .skill {
+    margin-bottom: 15px;
+  }
+
+  .skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+
+  .skill-fill {
+    height: 100%;
+    background-color: #3498db;
+    width: 0;
+    transition: width 0.5s ease;
+  }
 
 /* -------------------------------------skills--------------------------------------------  */
 
@@ -858,8 +881,8 @@ section {
 
 .solar-design{
     position: absolute;
-    bottom: 5%;
-    right: 5%;
+    bottom: 1%;
+    right: 1%;
     display: flex;
     align-items: center;
     justify-content: center;

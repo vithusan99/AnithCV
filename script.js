@@ -44,3 +44,39 @@ window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+// skillset 
+const skills = [
+    { name: "HTML", percentage: 95 },
+    { name: "CSS", percentage: 90 },
+    { name: "React JS", percentage: 85 },
+    { name: "Angular 2", percentage: 85 },
+    { name: "Vue.js", percentage: 80 },
+    { name: "Java", percentage: 60 },
+    { name: "Laravel", percentage: 80 },
+    { name: "MySQL", percentage: 75 },
+    { name: "Mongo DB", percentage: 75 },
+    { name: "ReactNative", percentage: 70 }
+  ];
+
+  const container = document.getElementById("skills-container");
+
+  skills.forEach(skill => {
+    const skillBox = document.createElement("div");
+    skillBox.className = "skill";
+
+    const skillLabel = document.createElement("div");
+    skillLabel.className = "skill-name";
+    skillLabel.textContent = `${skill.name} (${skill.percentage}%)`;
+
+    const progressBar = document.createElement("div");
+    progressBar.className = "skill-bar";
+
+    const progressFill = document.createElement("div");
+    progressFill.className = "skill-fill";
+    progressFill.style.width = `${skill.percentage}%`;
+
+    progressBar.appendChild(progressFill);
+    skillBox.appendChild(skillLabel);
+    skillBox.appendChild(progressBar);
+    container.appendChild(skillBox);
+  });
